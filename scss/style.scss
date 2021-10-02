@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap");
+
+  $blue: #2a4365;
+  $green: #30A59C;
+  $grey: #A0AEC0;
+  $grey-dark: #5E6C83;
+  $grey-light: #edf2f7;
+  $orange: #F9CA7A;
+  $orange-dark: #F29D45;
+ 
+* {
+    /* border: 1px solid pink; */
+}
+body {
+    font-family: Lato, sans-serif;
+
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .green {
+        background-color: $green;
+    }
+    .d-grey {
+        background-color: $grey-dark;
+    }
+}
+.main-grid {
+    display: none;
+}
+
+// MEDIA QUERIES
+@media screen and (min-width: 920px){
+    section.main-grid {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        gap: 2px;
+        /* Green Bar */
+        .green {
+            padding: 5px;
+            font-weight: bold;
+        }
+    }
+}

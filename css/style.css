@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap");
+* {
+  /* border: 1px solid pink; */
+}
+
+body {
+  font-family: Lato, sans-serif;
+}
+body .container {
+  width: 90%;
+  margin: 0 auto;
+}
+body .green {
+  background-color: #30A59C;
+}
+body .d-grey {
+  background-color: #5E6C83;
+}
+
+.main-grid {
+  display: none;
+}
+
+@media screen and (min-width: 920px) {
+  section.main-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 2px;
+    /* Green Bar */
+  }
+  section.main-grid .green {
+    padding: 5px;
+    font-weight: bold;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
