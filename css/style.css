@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap");
 * {
   /* border: 1px solid pink; */
+  box-sizing: border-box;
 }
 
 body {
@@ -11,15 +12,37 @@ body .container {
   width: 90%;
   margin: 0 auto;
 }
-body .green {
+body a {
+  text-decoration: none;
+  color: #000;
+}
+body .bg-green {
   background-color: #30A59C;
 }
-body .d-grey {
+body .bg-orange {
+  background-color: #F9CA7A;
+}
+body .bg-dark-orange {
+  background-color: #F29D45;
+}
+body .bg-grey {
+  background-color: #A0AEC0;
+}
+body .bg-light-grey {
+  background-color: #edf2f7;
+}
+body .bg-d-grey {
   background-color: #5E6C83;
 }
 
-.main-grid {
-  display: none;
+.main-grid h1, .main-grid h2, .main-grid h3, .main-grid h4, .main-grid h5, .main-grid h6 {
+  margin: 0px;
+}
+.main-grid .week-of {
+  color: #fff;
+}
+.main-grid .week-of h4 {
+  font-weight: 400;
 }
 
 @media screen and (min-width: 920px) {
@@ -28,10 +51,54 @@ body .d-grey {
     grid-template-columns: repeat(8, 1fr);
     gap: 2px;
     /* Green Bar */
+    /* Week Of */
+    /* Day */
+  }
+  section.main-grid h1, section.main-grid h2, section.main-grid h3, section.main-grid h4, section.main-grid h5, section.main-grid h6 {
+    margin: 5px;
   }
   section.main-grid .green {
     padding: 5px;
     font-weight: bold;
+  }
+  section.main-grid .h-56 {
+    height: 56.4px;
+  }
+  section.main-grid .max-h-136 {
+    height: 136px;
+  }
+  section.main-grid .week-of {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  section.main-grid .week-of h3, section.main-grid .week-of h4 {
+    font-size: 1.2rem;
+    color: #000;
+  }
+  section.main-grid .week-of h4 {
+    color: #fff;
+    font-weight: 400;
+  }
+  section.main-grid .day {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  section.main-grid .day h3, section.main-grid .day h5 {
+    font-weight: 400;
+  }
+  section.main-grid .day h3 {
+    font-size: 16px;
+  }
+  section.main-grid .day h5 {
+    font-size: 14px;
+  }
+  section.main-grid .sat {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
   }
 }
 

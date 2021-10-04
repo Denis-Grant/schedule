@@ -11,6 +11,7 @@
  
 * {
     /* border: 1px solid pink; */
+    box-sizing: border-box;
 }
 body {
     font-family: Lato, sans-serif;
@@ -19,20 +20,50 @@ body {
         width: 90%;
         margin: 0 auto;
     }
-    .green {
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+    .bg-green {
         background-color: $green;
     }
-    .d-grey {
+    .bg-orange {
+        background-color: $orange;
+    }
+    .bg-dark-orange {
+        background-color: $orange-dark;
+    }
+    .bg-grey {
+        background-color: $grey;
+    }
+    .bg-light-grey {
+        background-color: $grey-light;
+    }
+    .bg-d-grey {
         background-color: $grey-dark;
     }
 }
 .main-grid {
-    display: none;
+    // Week Of
+    h1,h2,h3,h4,h5,h6 {
+        margin: 0px;
+    }
+    .week-of {
+        color: #fff;
+        h4 {
+            font-weight: 400;
+        }
+
+    }
 }
 
 // MEDIA QUERIES
 @media screen and (min-width: 920px){
     section.main-grid {
+        h1,h2,h3,h4,h5,h6 {
+            margin: 5px;
+            
+        }
         display: grid;
         grid-template-columns: repeat(8, 1fr);
         gap: 2px;
@@ -40,6 +71,47 @@ body {
         .green {
             padding: 5px;
             font-weight: bold;
+        }
+        .h-56 {
+            height: 56.4px;
+        }
+        /* Week Of */
+        .max-h-136 {
+            height: 136px;
+        }
+        .week-of {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            h3, h4 {
+                font-size: 1.2rem;
+                color: #000;
+            }
+            h4 {
+                color: #fff;
+                font-weight: 400;
+            }
+        }
+        /* Day */
+        .day {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            h3, h5 {
+                font-weight: 400;
+            }
+            h3 {
+                font-size: 16px;
+            }
+            h5 {
+                font-size: 14px;
+            }
+        }
+        .sat {
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
         }
     }
 }
